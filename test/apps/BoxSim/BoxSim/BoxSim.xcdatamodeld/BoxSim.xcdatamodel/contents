@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F27" minimumToolsVersion="Automatic">
+    <entity name="Box" representedClassName="BSBoxMO" syncable="YES">
+        <attribute name="capacity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="material" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contains" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="containedIn" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="Item" representedClassName="BSItemMO" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="containedIn" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Box" inverseName="contains" inverseEntity="Box" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="28"/>
+        <element name="Box" positionX="243" positionY="-117" width="128" height="28"/>
+    </elements>
+</model>

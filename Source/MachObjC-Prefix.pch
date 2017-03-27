@@ -1,0 +1,14 @@
+/********************************************
+  Copyright 2016 PreEmptive Solutions, LLC
+  See LICENSE.txt for licensing information
+********************************************/
+
+//
+// Prefix header for all source files of the 'libMachObjC' target in the 'class-dump' project.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import "CDExtensions.h"
+    #define __cmd __PRETTY_FUNCTION__
+#endif
